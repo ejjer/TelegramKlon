@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">TelegramKlon</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="chats">Chats</string>
+    <string name="settings">settings</string>
+    <string name="settings_default_user_name">Ivanov Ivan</string>
+    <string name="settings_default_status">online</string>
+    <string name="settings_account_text">Account</string>
+    <string name="default_number">+375330000000</string>
+    <string name="settings_label_phone_number">Сlick to change the phone number</string>
+    <string name="default_login">ivanovIvan</string>
+    <string name="settings_label_login">Сlick to change login</string>
+    <string name="default_bio">About me</string>
+    <string name="settings_label_bio">Write a little about yourself</string>
+    <string name="settings_menu_change_name">Change name</string>
+    <string name="settings_menu_exit">Exit</string>
+</resources>

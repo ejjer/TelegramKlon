@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ivanov_ivan">settings_defalt_user_name</string>
+    <string name="settings_default_status">online</string>
+    <string name="settings_account_text">Account</string>
+    <string name="defolt_number">+375330000000</string>
+    <string name="settings_lable_phone_number">Сlick to change the phone number</string>
+    <string name="default_login">ivanovIvan</string>
+    <string name="settings_label_login">q</string>
+    <string name="default_bio">about me</string>
+    <string name="settings_label_bio">Write a little about yourself</string>
+    <string name="settings_menu_exit">Exit</string>
+</resources>
