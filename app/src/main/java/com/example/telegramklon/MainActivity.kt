@@ -1,23 +1,25 @@
 package com.example.telegramklon
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
+import com.example.telegramklon.activitys.RegisterActivity
 import com.example.telegramklon.databinding.ActivityMainBinding
 import com.example.telegramklon.ui.fragments.ChatsFragment
 import com.example.telegramklon.ui.oblects.AppDrawer
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var mBinding: ActivityMainBinding
-    private lateinit var mToolbar: Toolbar
-    private lateinit var mAppDrawer:AppDrawer
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var toolbar: Toolbar
+    private lateinit var appDrawer: AppDrawer
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mBinding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(mBinding.root)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
     }
 
     override fun onStart() {
@@ -27,16 +29,24 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initFunc() {
-        setSupportActionBar(mToolbar)
-        mAppDrawer.create()
-        supportFragmentManager.beginTransaction().replace(R.id.DataContainer, ChatsFragment.newInstance()).commit()
+        if (false) {
+            setSupportActionBar(toolbar)
+            appDrawer.create()
+            supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.DataContainer, ChatsFragment.newInstance())
+                .commit()
+        } else {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
+
 
     }
 
 
-
     private fun initFields() {
-        mToolbar = mBinding.mainToolBar
-        mAppDrawer= AppDrawer(this,mToolbar)
+        toolbar = binding.mainToolBar
+        appDrawer = AppDrawer(this, toolbar)
     }
 }

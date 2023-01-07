@@ -15,4 +15,9 @@
     <string name="settings_label_bio">Write a little about yourself</string>
     <string name="settings_menu_change_name">Change name</string>
     <string name="settings_menu_exit">Exit</string>
+    <string name="register_text_input_code">Enter the code</string>
+    <string name="register_text_sent_sms">We have sent you an sms</string>
+    <string name="register_hint_default">- - - - - -</string>
+    <string name="register_title_you_phone">Ваш телефон</string>
+    <string name="enter_phone_hint">Enter phone number</string>
 </resources>

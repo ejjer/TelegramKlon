@@ -7,21 +7,18 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.telegramklon.R
 
-
-open class BaseFragment(val layout : Int) : Fragment() {
-
-    private lateinit var rootView:View
+class BlankFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        rootView = inflater.inflate(layout,container,false)
-        return rootView
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_blank, container, false)
     }
 
-    override fun onStart() {
-        super.onStart()
-    }
+    companion object {
 
-}
+        fun newInstance() = BlankFragment()
+            }
+    }

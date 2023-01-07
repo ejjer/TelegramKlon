@@ -6,10 +6,14 @@
         <entry key="..\:/TelegramKlon/app/src/main/res/drawable/header.xml" value="0.1" />
         <entry key="..\:/TelegramKlon/app/src/main/res/drawable/ic_btn_action_menu_change_name.xml" value="0.1" />
         <entry key="..\:/TelegramKlon/app/src/main/res/drawable/ic_btn_action_meny_exit.xml" value="0.1" />
+        <entry key="..\:/TelegramKlon/app/src/main/res/drawable/ic_btn_next.xml" value="0.1305" />
         <entry key="..\:/TelegramKlon/app/src/main/res/drawable/ripple_effect.xml" value="0.1" />
         <entry key="..\:/TelegramKlon/app/src/main/res/layout/activity_main.xml" value="0.184375" />
+        <entry key="..\:/TelegramKlon/app/src/main/res/layout/activity_register.xml" value="0.184375" />
         <entry key="..\:/TelegramKlon/app/src/main/res/layout/fragment_base.xml" value="0.1703125" />
         <entry key="..\:/TelegramKlon/app/src/main/res/layout/fragment_cats.xml" value="0.184375" />
+        <entry key="..\:/TelegramKlon/app/src/main/res/layout/fragment_enter_code.xml" value="0.184375" />
+        <entry key="..\:/TelegramKlon/app/src/main/res/layout/fragment_enter_phone_number.xml" value="0.184375" />
         <entry key="..\:/TelegramKlon/app/src/main/res/layout/fragment_settings.xml" value="0.22" />
         <entry key="..\:/TelegramKlon/app/src/main/res/menu/settings_action_menu.xml" value="0.184375" />
       </map>

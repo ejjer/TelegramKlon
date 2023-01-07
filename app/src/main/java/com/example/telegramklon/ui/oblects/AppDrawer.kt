@@ -17,8 +17,8 @@ import com.mikepenz.materialdrawer.model.ProfileDrawerItem
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem
 
 class AppDrawer (val mainActivity:AppCompatActivity,val toolbar: Toolbar){
-    private lateinit var mDrawer: Drawer
-    private lateinit var mHeader: AccountHeader
+    private lateinit var drawer: Drawer
+    private lateinit var header: AccountHeader
 
     fun create(){
         createHeader()
@@ -26,12 +26,12 @@ class AppDrawer (val mainActivity:AppCompatActivity,val toolbar: Toolbar){
     }
 
     private fun createDrawer() {
-        mDrawer = DrawerBuilder()
+        drawer = DrawerBuilder()
             .withActivity(mainActivity)
             .withToolbar(toolbar)
             .withActionBarDrawerToggle(true)
             .withSelectedItem(-1)
-            .withAccountHeader(mHeader)
+            .withAccountHeader(header)
             .addDrawerItems(
 
                 PrimaryDrawerItem().withIdentifier(100)
@@ -101,7 +101,7 @@ class AppDrawer (val mainActivity:AppCompatActivity,val toolbar: Toolbar){
     }
 
     private fun createHeader() {
-        mHeader = AccountHeaderBuilder()
+        header = AccountHeaderBuilder()
             .withActivity(mainActivity)
             .withHeaderBackground(R.drawable.header)
             .addProfiles(

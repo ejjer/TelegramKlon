@@ -14,6 +14,12 @@
         android:theme="@style/Theme.TelegramKlon.Light"
         tools:targetApi="31">
         <activity
+            android:name=".activitys.RegisterActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            />
+
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
