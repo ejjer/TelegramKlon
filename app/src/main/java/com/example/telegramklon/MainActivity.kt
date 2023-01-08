@@ -8,6 +8,8 @@ import com.example.telegramklon.activitys.RegisterActivity
 import com.example.telegramklon.databinding.ActivityMainBinding
 import com.example.telegramklon.ui.fragments.ChatsFragment
 import com.example.telegramklon.ui.oblects.AppDrawer
+import com.example.telegramklon.utilits.replaceActivity
+import com.example.telegramklon.utilits.replaceFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,19 +31,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initFunc() {
-        if (false) {
+
+        if (true) {
             setSupportActionBar(toolbar)
             appDrawer.create()
-            supportFragmentManager
-                .beginTransaction()
-                .replace(R.id.DataContainer, ChatsFragment.newInstance())
-                .commit()
+            replaceFragment(ChatsFragment.newInstance())
         } else {
-            val intent = Intent(this, RegisterActivity::class.java)
-            startActivity(intent)
+            replaceActivity(RegisterActivity())
         }
-
-
     }
 
 

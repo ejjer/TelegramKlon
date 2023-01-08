@@ -11,6 +11,8 @@ import androidx.fragment.app.Fragment
 import com.example.telegramklon.R
 import com.example.telegramklon.databinding.FragmentEnterCodeBinding
 import com.example.telegramklon.databinding.FragmentEnterPhoneNumberBinding
+import com.example.telegramklon.utilits.AppTextWatcher
+import com.example.telegramklon.utilits.showToast
 
 
 class EnterCodeFragment : Fragment() {
@@ -28,24 +30,17 @@ class EnterCodeFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        binding?.registerInputCode?.addTextChangedListener(object :TextWatcher{
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-               val string = binding?.registerInputCode?.text.toString()
-                if (string.length == 6){
-                    verifiCode()
-                }
-            }
+        binding?.registerInputCode.addTextChangedListener(AppTextWatcher {
 
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-            }
-
-            override fun afterTextChanged(s: Editable?) {
+            val string = binding.registerInputCode.text.toString()
+            if (string.length == 6) {
+                verifiCode()
             }
         })
     }
 
-    fun verifiCode(){
-        Toast.makeText(activity,"ok",Toast.LENGTH_SHORT).show()
+    fun verifiCode() {
+        showToast("Ok")
     }
 
     override fun onDestroyView() {
@@ -54,7 +49,7 @@ class EnterCodeFragment : Fragment() {
     }
 
 
-        companion object {
+    companion object {
         fun newInstance() = EnterCodeFragment()
     }
 }

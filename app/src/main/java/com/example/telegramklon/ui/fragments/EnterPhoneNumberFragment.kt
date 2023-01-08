@@ -8,6 +8,8 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.telegramklon.R
 import com.example.telegramklon.databinding.FragmentEnterPhoneNumberBinding
+import com.example.telegramklon.utilits.replaceFragment
+import com.example.telegramklon.utilits.showToast
 
 
 class EnterPhoneNumberFragment : Fragment() {
@@ -21,48 +23,21 @@ class EnterPhoneNumberFragment : Fragment() {
     ): View? {
         _binding = FragmentEnterPhoneNumberBinding.inflate(inflater, container, false)
         return binding.root
-
-
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        binding.registerBtnNext.setOnClickListener {
-            if (binding.registerInputPhoneNumber.text.toString().isEmpty()) {
-                Toast.makeText(activity, "Enter code", Toast.LENGTH_SHORT).show()
-            } else {
-                fragmentManager?.beginTransaction()
-                    ?.replace(R.id.registerDataContainer, EnterCodeFragment.newInstance())
-                    ?.addToBackStack(null)
-                    ?.commit()
-            }
-        }
     }
 
     override fun onStart() {
         super.onStart()
         binding.registerBtnNext.setOnClickListener {
-            if (binding.registerInputPhoneNumber.text.toString().isEmpty()) {
-                Toast.makeText(activity, "Enter code", Toast.LENGTH_SHORT).show()
-            } else {
-                fragmentManager?.beginTransaction()
-                    ?.replace(R.id.registerDataContainer, EnterCodeFragment.newInstance())
-                    ?.addToBackStack(null)
-                    ?.commit()
-            }
+            sendCode()
         }
-
     }
 
     private fun sendCode() {
 
         if (binding.registerInputPhoneNumber.text.toString().isEmpty()) {
-            Toast.makeText(activity, "Enter code", Toast.LENGTH_SHORT).show()
+            showToast("Enter phone number")
         } else {
-            fragmentManager?.beginTransaction()
-                ?.replace(R.id.registerDataContainer, EnterCodeFragment.newInstance())
-                ?.addToBackStack(null)
-                ?.commit()
+            replaceFragment(EnterCodeFragment.newInstance())
         }
     }
 
